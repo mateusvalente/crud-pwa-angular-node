@@ -1,0 +1,50 @@
+<header class="topbar">
+  <div class="container topbar-content">
+    <a class="brand" routerLink="/produtos">
+      CRUD PWA
+    </a>
+
+    <div class="right-side">
+      <span
+        class="network-status"
+        [class.offline]="!online()"
+      >
+        <span class="status-dot"></span>
+        {{ online() ? 'Online' : 'Offline' }}
+      </span>
+
+      <nav>
+        <a
+          routerLink="/produtos"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Produtos
+        </a>
+
+        <a
+          routerLink="/produtos/novo"
+          routerLinkActive="active"
+        >
+          Novo produto
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+@if (!online()) {
+  <div class="offline-banner">
+    Você está offline. Dados já consultados podem ser exibidos pelo cache.
+  </div>
+}
+
+<main class="container">
+  <router-outlet />
+</main>
+
+<footer class="footer">
+  <div class="container">
+    Angular PWA + Service Worker + Node.js + PostgreSQL
+  </div>
+</footer>

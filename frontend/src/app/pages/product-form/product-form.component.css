@@ -1,0 +1,56 @@
+.page-header {
+  margin-bottom: 24px;
+}
+
+.page-header h1 {
+  margin: 0 0 6px;
+}
+
+.page-header p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.form-card {
+  max-width: 560px;
+}
+
+label {
+  display: block;
+  margin: 18px 0 8px;
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 11px 12px;
+  font: inherit;
+}
+
+input:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #2563eb;
+}
+
+.field-error {
+  display: block;
+  margin-top: 6px;
+  color: #b91c1c;
+}
+
+.error {
+  margin-bottom: 16px;
+  border-radius: 8px;
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 12px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 24px;
+}
