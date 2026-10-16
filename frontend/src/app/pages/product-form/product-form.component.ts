@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import {
   FormBuilder,
   ReactiveFormsModule,
@@ -23,6 +23,8 @@ import { ProductService } from '../../services/product.service';
   styleUrl: './product-form.component.css',
 })
 export class ProductFormComponent implements OnInit {
+  private readonly formBuilder = inject(FormBuilder);
+
   productId: number | null = null;
   loading = false;
   saving = false;
@@ -46,7 +48,6 @@ export class ProductFormComponent implements OnInit {
   });
 
   constructor(
-    private readonly formBuilder: FormBuilder,
     private readonly route: ActivatedRoute,
     private readonly router: Router,
     private readonly productService: ProductService,
